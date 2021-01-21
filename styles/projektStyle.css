@@ -40,22 +40,23 @@ article {
 
 nav > ul {
     list-style: none;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: space-around;
+    /* grid-template-columns: repeat(4, 1fr); */
     grid-gap: 10px;
     text-align: center;
 }
 
 nav ul {
-    width: 30px;
-    height: 30px;
+    /* width: 30px;
+    height: 30px; */
     background: hsla(240, 100%, 90%, 1);
     transition: 2s;
 }
 
 nav ul:hover {
-    width: 500px;
-    height: 100px;
+    /* width: 500px;
+    height: 100px; */
 }
 
 main {
@@ -126,3 +127,4 @@ img {
     height: 50vh;
     object-fit: cover;
 }
+
