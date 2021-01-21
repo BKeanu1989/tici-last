@@ -1,0 +1,128 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: sans-serif;
+    font-size: 1rem;
+
+    --bgColor: hsla(0, 90%, 90%, 1);
+    --borderColor: hsla(0, 50%, 30%, 1);
+}
+
+h1 {
+    color: hsla(20, 100%, 30%, 1);
+    font-size: 2rem;
+}
+
+h2,
+h3 {
+    font-size: 1.2rem;
+    margin-right: auto;
+    width: max-content;
+}
+
+p,
+ul {
+    font-size: 1rem;
+}
+
+ul {
+    list-style-position: inside
+}
+
+nav > ul,
+article {
+    margin: 1;
+}
+
+nav > ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    text-align: center;
+}
+
+nav ul {
+    width: 30px;
+    height: 30px;
+    background: hsla(240, 100%, 90%, 1);
+    transition: 2s;
+}
+
+nav ul:hover {
+    width: 500px;
+    height: 100px;
+}
+
+main {
+    display: grid;
+    grid-template-areas:
+        "id1 id2"
+        "id1 id2"
+        "id3 id3"
+        "id4 id5"
+}
+
+#Bedeutung {
+    grid-area: id1;
+}
+
+#Ursprung {
+    grid-area: id2;
+}
+
+#erste {
+    grid-area: id3;
+}
+
+#beliebt {
+    grid-area: id4;
+}
+
+#einzigartig {
+    grid-area: id5;
+}
+
+figure {
+    /*text-align: center; s
+    */
+    position: relative;
+
+}
+
+figcaption {
+    position: absolute;
+    background-color: hsla(120, 100%, 75%, 0.5);
+    width: 20vh;
+    left: 0;
+    bottom: 0;
+
+}
+
+.logo {
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+blockquote {
+    background: var(--bgColor);
+    text-align: center;
+    padding: 2%;
+    margin: 2%;
+    width: 100%;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+
+img {
+    max-width: 100%;
+    position: relative;
+    width: 70%;
+    height: 50vh;
+    object-fit: cover;
+}
