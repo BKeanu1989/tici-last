@@ -84,9 +84,18 @@
         }, false);
 
         submit.addEventListener("click", function (e) {
-            if (validate())
-                showMessage(form, "Danke", "danke");
             e.preventDefault();
+            if (validate())
+            // woher kommt form?
+                showMessage(form, "Danke", "danke");
+
+                let $form = document.querySelector('form')
+                const formData = new FormData($form)
+                const entries = formData.entries()
+
+                for (const pair of entries) {
+                    console.log(`key: ${pair[0]}, value: ${pair[1]}`)
+                }
         }, false);
     }
 
