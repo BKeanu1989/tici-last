@@ -61,6 +61,7 @@ nav ul:hover {
 
 main {
     display: grid;
+    column-gap: 20px;
     grid-template-areas:
         "id1 id2"
         "id1 id2"
