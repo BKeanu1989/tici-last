@@ -78,19 +78,20 @@
             <legend>Persönliche Daten</legend>
             <div>
                 <label for="lastName">Nachname</label>
-                <input type="text" id="lastName" required pattern="[a-z,A-Z, ,-]{3,25}">
+                <!-- <input type="text" id="lastName" required pattern="[a-z,A-Z, ,-]{3,25}"> -->
+                <input type="text" id="lastName" name="lastName" required pattern="[a-z,A-Z, ,-]{3,25}">
             </div>
             <div>
                 <label for="firstName">Vorname</label>
-                <input type="text" id="firstName" required minlength="3">
+                <input type="text" id="firstName" name="firstName" required minlength="3">
             </div>
             <div>
                 <label for="age">Alter</label>
-                <input type="number" id="age" required min="16" max="99">
+                <input type="number" id="age" name="age" required min="16" max="99">
             </div>
             <div>
                 <label for="mail">E-Mail</label>
-                <input type="email" id="mail" required multiple>
+                <input type="email" id="mail" name="mail" required multiple>
             </div>
         </fieldset>
         <fieldset id="gender">
@@ -129,7 +130,7 @@
         <fieldset id="opinion">
             <legend> Was denken Sie über K-Pop</legend>
             <label for="message">Schreiben Sie uns Ihre Meinung: </label>
-            <textarea id="message" cols="30" rows="10"> </textarea>
+            <textarea id="message" name="meinung" cols="30" rows="10"> </textarea>
         </fieldset>
         <input type="submit" value="Abschicken">
         <input type="reset" value="Zurücksetzten">
