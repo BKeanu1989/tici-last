@@ -66,6 +66,7 @@ main {
         "id1 id2"
         "id1 id2"
         "id3 id3"
+        "logos logos"
         "id4 id5"
 }
 
@@ -79,6 +80,12 @@ main {
 
 #erste {
     grid-area: id3;
+    /* display: flex; */
+
+}
+
+#logos-agenturen {
+    grid-area: logos;
 }
 
 #beliebt {
@@ -121,7 +128,7 @@ blockquote {
 }
 
 
-img {
+img.banner {
     max-width: 100%;
     position: relative;
     width: 70%;
@@ -129,3 +136,29 @@ img {
     object-fit: cover;
 }
 
+.logos-agenturen figure {
+    display: inline;
+}
+
+#recommendation {
+    display: none;
+    opacity: 0;
+}
+
+#recommendation.fade-in {
+    display: block;
+}
+
+#recommendation.show {
+    height: auto;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
