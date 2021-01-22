@@ -112,6 +112,10 @@ figcaption {
 
 }
 
+img {
+    max-width: 100%;
+}
+
 .logo {
     display: block;
     margin: auto;
@@ -160,5 +164,21 @@ img.banner {
     }
     to {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    nav > ul {
+        display: block;
+    }
+
+    main {
+        grid-template-areas:
+        "id1"
+        "id2"
+        "id3"
+        "logos"
+        "id4"
+        "id5"
     }
 }
