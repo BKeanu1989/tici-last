@@ -53,6 +53,30 @@
         }
     }
 
+    const toggleQuestion = (e) => {
+        let chosen = document.querySelector('input[type="radio"][name="gehoert"]:checked')
+        let recommendation = document.querySelector('fieldset#recommendation')
+
+        switch (chosen.value) {
+            case 'j':
+                // wenn ja
+                // +.fade-in +.show
+                recommendation.classList.add('fade-in', 'show')
+                break;
+        
+            case 'n':
+                if (recommendation.classList.contains('fade-in')) {
+                    recommendation.classList.remove('fade-in')
+                    recommendation.classList.remove('show')
+                }
+
+                break;
+
+            default:
+                break;
+        }
+    }
+
     let validate = () => {
         let error = null;
         if (checkEmptyText(ln))
@@ -82,6 +106,12 @@
         mail.addEventListener("blur", function (e) {
             checkEmptyText(this);
         }, false);
+
+        let gehoertRadios = document.querySelectorAll('input[type="radio"][name="gehoert"]')
+        gehoertRadios.forEach(element => {
+            element.addEventListener('click', toggleQuestion)
+        });
+        
 
         submit.addEventListener("click", function (e) {
             e.preventDefault();
